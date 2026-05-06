@@ -16,11 +16,11 @@ my_list <- c(3192, 3124, 3153, 3145, 3093, 3466, 3355, 2979, 3182, 3227,
 mean(my_list)
 sd(my_list)
 
-p_value <- pt(-0.3512, df = 14) + pt(0.3512, df = 14, lower.tail = FALSE)
+p_value <- 2 * pt(0.3512, df = 14, lower.tail = FALSE)
 p_value
 
 # Question 4
-p_value <- pnorm(2.53, lower.tail = FALSE)
+p_value <- pnorm(2.5381, lower.tail = FALSE)
 p_value
 
 # Question 5
@@ -41,4 +41,6 @@ power.t.test(
 p_value <- 2 * pt(1.0606, df=49, lower.tail = FALSE)
 p_value
 
- 
+# Question 7
+p_value <- pt(-1.89, df = 9)
+p_value

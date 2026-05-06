@@ -3,7 +3,7 @@ library(ggplot2)
 
 # Define population parameters and simulation size
 prob_success <- 0.5
-sample_size <- 50
+sample_size <- 300
 n_simulations <- 1000
 
 # Set seed for reproducibility
@@ -36,7 +36,7 @@ plot <- ggplot(prop_data, aes(x = Sample_Prop)) +
   # Customize labels and title
   labs(
     title = paste("Sampling Distribution of the Proportion (n = ", sample_size, ")", sep = ""),
-    subtitle = paste(n_simulations, "Samples from Bin(50, 0.5"),
+    subtitle = paste(n_simulations, " Samples from Bin(", sample_size, ", ", prob_success, ")", sep = ""),
     x = "Sample Proportion",
     y = "Density"
   ) +
